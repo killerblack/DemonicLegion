@@ -1,5 +1,5 @@
 ﻿namespace Entities {
-    public class PlantillaPociones {
+    public class PlantillaPociones : IEntity {
         /*
          * plantillaPocionesId
          * item1

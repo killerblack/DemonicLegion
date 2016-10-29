@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace Entities {
-    public class Armadura {
+    public class Armadura : IEntity {
         /**
          * 	id
          *	nombre

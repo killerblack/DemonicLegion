@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace Entities {
-    public class EstadoAlterado {
+    public class EstadoAlterado : IEntity {
         /*
          * estadoAlteradoId
          * nombre

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace Entities {
-    public class Raza {
+    public class Raza : IEntity {
         /*
          * Se inician propiedades en cada diferente raza
          * Se configura su invocación racial

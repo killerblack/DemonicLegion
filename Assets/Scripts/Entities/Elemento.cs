@@ -1,5 +1,5 @@
 ﻿namespace Entities {
-    public class Elemento {
+    public class Elemento : IEntity {
         /*
          * elementId
          * nombre

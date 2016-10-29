@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace Entities {
-    public class Clase {
+    public class Clase : IEntity {
         /*
          * claseId
          * nombre

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace Entities {
-    public class Invocacion {
+    public class Invocacion : IEntity {
         /*
          * invocacionId
          * nombre

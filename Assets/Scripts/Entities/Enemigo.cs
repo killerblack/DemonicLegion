@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace Entities {
-    public class Enemigo {
+    public class Enemigo : IEntity {
 
         /*
          * enemigoId

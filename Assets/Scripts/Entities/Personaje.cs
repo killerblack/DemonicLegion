@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace Entities {
-    public class Personaje {
+    public class Personaje : IEntity {
         /*
          * personajeId
          * Nombre
