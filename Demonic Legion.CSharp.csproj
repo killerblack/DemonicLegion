@@ -94,6 +94,17 @@
     <Compile Include="Assets\Scripts\Implement\AtributoImplementacion.cs" />
     <Compile Include="Assets\Scripts\Implement\ClaseImplementacion.cs" />
     <Compile Include="Assets\Scripts\Implement\ElementoImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\EnemigoImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\EstadoAlteradoImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\HabilidadImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\InvocacionImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\ItemImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\MascotaImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\PersonajeImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\PlantillaArmaduraImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\PlantillaArmaImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\PlantillaPocionesImplementacion.cs" />
+    <Compile Include="Assets\Scripts\Implement\RazaImplementacion.cs" />
     <Compile Include="Assets\Scripts\Mapper\ArmaMapper.cs" />
     <Compile Include="Assets\Scripts\Mapper\ArmaduraMapper.cs" />
     <Compile Include="Assets\Scripts\Mapper\AtributoMapper.cs" />
