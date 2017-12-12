@@ -3,7 +3,7 @@ using Entities;
 using System.Collections.Generic;
 using System.Data;
 using Assets.Scripts.Mapper;
-using Assets.Scripts.Dao;
+using Assets.Scripts.DataBase;
 
 namespace Assets.Scripts.Implement {
     public class ArmaduraImplementacion : IDaoBase<Armadura> {
@@ -21,7 +21,11 @@ namespace Assets.Scripts.Implement {
             command = dataBase.getConnection().CreateCommand();
         }
 
-        void IDaoBase<Armadura>.Add(Armadura entity) {
+        public void Add(Armadura armadura) {
+            if (armadura == null) {
+                throw new System.ArgumentNullException( "Argument is invalid " );
+            }
+
             sql = dataBase.insertInto( "Armadura", new List<string>() {
                 "armaduraId",
                 "nombre",
@@ -39,17 +43,17 @@ namespace Assets.Scripts.Implement {
             Console.WriteLine( "Insert armadura : " + sql );
 
             command.CommandText = sql;
-            command.Parameters.Add( entity.ArmaduraId);
-            command.Parameters.Add( entity.Nombre );
-            command.Parameters.Add( entity.Descripcion );
-            command.Parameters.Add( entity.Icono );
-            command.Parameters.Add( entity.Tipo );
-            command.Parameters.Add( entity.Precio);
-            command.Parameters.Add( entity.Peso);
-            command.Parameters.Add( entity.Nivel);
-            command.Parameters.Add( entity.ListaElementos );
-            command.Parameters.Add( entity.ListaEstadosAlterados );
-            command.Parameters.Add( entity.ListaAtributos);
+            command.Parameters.Add( armadura.ArmaduraId );
+            command.Parameters.Add( armadura.Nombre );
+            command.Parameters.Add( armadura.Descripcion );
+            command.Parameters.Add( armadura.Icono );
+            command.Parameters.Add( armadura.Tipo );
+            command.Parameters.Add( armadura.Precio );
+            command.Parameters.Add( armadura.Peso );
+            command.Parameters.Add( armadura.Nivel );
+            command.Parameters.Add( armadura.ListaElementos );
+            command.Parameters.Add( armadura.ListaEstadosAlterados );
+            command.Parameters.Add( armadura.ListaAtributos );
 
             try {
                 command.ExecuteNonQuery();
@@ -61,7 +65,7 @@ namespace Assets.Scripts.Implement {
             }
         }
 
-        void IDaoBase<Armadura>.Delete(int armaduraId) {
+        public void Delete(int armaduraId) {
             sql = dataBase.deleteFrom( "Armadura", new List<string>() { "armaduraId = @armaduraId" } );
             Console.WriteLine( "Delete armadura : " + sql );
             command.CommandText = sql;
@@ -76,7 +80,7 @@ namespace Assets.Scripts.Implement {
             }
         }
 
-        void IDaoBase<Armadura>.Update(Armadura armadura) {
+        public void Update(Armadura armadura) {
             sql = dataBase.update( "Armadura", new List<string>() {
                 "armaduraId=:armaduraId",
                 "nombre=:nombre",
@@ -118,7 +122,7 @@ namespace Assets.Scripts.Implement {
             }
         }
 
-        Armadura IDaoBase<Armadura>.getById(int armaduraId) {
+        public Armadura getById(int armaduraId) {
             sql = dataBase.selectAllFrom( "Armadura", new List<string>() { "armaduraID = ?" } );
             armadura = new Armadura();
 
@@ -139,7 +143,7 @@ namespace Assets.Scripts.Implement {
             return armadura;
         }
 
-        Armadura IDaoBase<Armadura>.getByName(string name) {
+        public Armadura getByName(string name) {
             sql = dataBase.selectAllFrom( "Armadura", new List<string>() { "nombre = ?" } );
             armadura = new Armadura();
 
@@ -160,7 +164,7 @@ namespace Assets.Scripts.Implement {
             return armadura;
         }
 
-        List<Armadura> IDaoBase<Armadura>.getAll() {
+        public List<Armadura> getAll() {
             sql = dataBase.selectAllFrom( "Armadura" );
 
             command.CommandText = sql;
@@ -178,7 +182,7 @@ namespace Assets.Scripts.Implement {
             return listaArmaduras;
         }
 
-        int IDaoBase<Armadura>.getCount() {
+        public int getCount() {
             int count = 0;
             sql = dataBase.getCountFrom( "Armadura" );
             command.CommandText = sql;

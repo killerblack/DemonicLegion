@@ -3,7 +3,7 @@ using Entities;
 using System.Collections.Generic;
 using System.Data;
 using Assets.Scripts.Mapper;
-using Assets.Scripts.Dao;
+using Assets.Scripts.DataBase;
 
 namespace Assets.Scripts.Implement {
     class EstadoAlteradoImplementacion : IDaoBase<EstadoAlterado> {

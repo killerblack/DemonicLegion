@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entities;
 
-namespace Assets.Scripts.Dao {
+namespace Assets.Scripts.DataBase{
     public interface IDaoBase<T> where T : IEntity {
         void Add(T entity);
         void Delete(int id);

@@ -32,98 +32,81 @@ namespace Entities {
         private List<Atributo> listaAtributos;
         private List<Elemento> listaElementos;
         private List<EstadoAlterado> listaEstadosAlterados;
-
         private List<Clase> listaClases;
         private List<Raza> listaRazas;
         private List<Item> listaItems;
-        
 
-        public int ArmaId
-        {
+        public int ArmaId{
             get { return armaId; }
             set { armaId = value; }
         }
 
-        public string Nombre
-        {
+        public string Nombre{
             get { return nombre; }
             set { nombre = value; }
         }
 
-        public string Descripcion
-        {
+        public string Descripcion{
             get { return descripcion; }
             set { descripcion = value; }
         }
 
-        public byte[] Icono
-        {
+        public byte[] Icono{
             get { return icono; }
             set { icono = value; }
         }
 
-        public int Tipo
-        {
+        public int Tipo{
             get { return tipo; }
             set { tipo = value; }
         }
 
-        public int Precio
-        {
+        public int Precio{
             get { return precio; }
             set { precio = value; }
         }
 
-        public List<Atributo> ListaAtributos
-        {
+        public List<Atributo> ListaAtributos{
             get { return listaAtributos; }
             set { listaAtributos = value; }
         }
 
-        public List<Elemento> ListaElementos
-        {
+        public List<Elemento> ListaElementos{
             get { return listaElementos; }
             set { listaElementos = value; }
         }
 
-        public List<EstadoAlterado> ListaEstadosAlterados
-        {
+        public List<EstadoAlterado> ListaEstadosAlterados{
             get { return listaEstadosAlterados; }
             set { listaEstadosAlterados = value; }
         }
 
-        public List<Clase> ListaClases
-        {
+        public List<Clase> ListaClases{
             get { return listaClases; }
             set { listaClases = value; }
         }
 
-        public List<Raza> ListaRazas
-        {
+        public List<Raza> ListaRazas{
             get { return listaRazas; }
             set { listaRazas = value; }
         }
 
-        public int BonoSanacion
-        {
+        public int BonoSanacion{
             get { return bonoSanacion; }
             set { bonoSanacion = value; }
         }
 
-        public List<Item> ListaItems
-        {
+        public List<Item> ListaItems{
             get { return listaItems; }
             set { listaItems = value; }
         }
 
-        public int Peso
-        {
+        public int Peso{
             get { return peso; }
             set { peso = value; }
         }
 
-        public int Nivel
-        {
+        public int Nivel{
             get { return nivel; }
             set { nivel = value; }
         }

@@ -8,22 +8,22 @@ public class DBConnection : MonoBehaviour {
 
     private string connectionString;
     private IDbConnection connection;
-
+    
     public IDbConnection getConnection() {
-        connectionString = "URI=file:" + Application.dataPath + "/dataBaseUnity.sqlite";
+        ConnectionString = "URI=file:" + Application.dataPath + "/dataBaseUnity.sqlite";
         Console.WriteLine( "Application.dataPath : " + Application.dataPath );
         Console.WriteLine( "All Path : " + Application.dataPath + "/dataBaseUnity.sqlite" );
         //connectionString = "Data Source=/F:/Demonic Legion/Assets/DataBase/dataBaseUnity.sqlite";
-        connection = (IDbConnection) new SqliteConnection( connectionString );
-        connection.Open();
-        return connection;
+        Connection = (IDbConnection) new SqliteConnection( ConnectionString );
+        Connection.Open();
+        return Connection;
     }
 
     public void exitConnection() {
-        if (connection != null) {
-            connection.Close();
+        if (Connection != null) {
+            Connection.Close();
         }
-        connection = null;
+        Connection = null;
     }
 
     /**
@@ -165,5 +165,14 @@ public class DBConnection : MonoBehaviour {
             }
         }
         return query;
+    }
+
+    public IDbConnection Connection {
+        get { return connection; }
+        set { connection = value; }
+    }
+    public global::System.String ConnectionString {
+        get { return connectionString; }
+        set { connectionString = value; }
     }
 }
